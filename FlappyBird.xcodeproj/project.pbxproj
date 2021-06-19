@@ -13,6 +13,9 @@
 		E90AD021266CFDD70076ACBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90AD01F266CFDD70076ACBB /* Main.storyboard */; };
 		E90AD023266CFDD80076ACBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90AD022266CFDD80076ACBB /* Assets.xcassets */; };
 		E90AD026266CFDD80076ACBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90AD024266CFDD80076ACBB /* LaunchScreen.storyboard */; };
+		E90AD030266D1C820076ACBB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90AD02F266D1C820076ACBB /* GameScene.swift */; };
+		E9616185267DB41600687AE8 /* coin03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9616184267DB41600687AE8 /* coin03.mp3 */; };
+		E9F22504267B7FCA00E6F1C2 /* powerup01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F22503267B7FCA00E6F1C2 /* powerup01.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E90AD022266CFDD80076ACBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E90AD025266CFDD80076ACBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E90AD027266CFDD80076ACBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E90AD02F266D1C820076ACBB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		E9616184267DB41600687AE8 /* coin03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin03.mp3; sourceTree = "<group>"; };
+		E9F22503267B7FCA00E6F1C2 /* powerup01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = powerup01.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +65,11 @@
 				E90AD019266CFDD70076ACBB /* AppDelegate.swift */,
 				E90AD01B266CFDD70076ACBB /* SceneDelegate.swift */,
 				E90AD01D266CFDD70076ACBB /* ViewController.swift */,
+				E90AD02F266D1C820076ACBB /* GameScene.swift */,
 				E90AD01F266CFDD70076ACBB /* Main.storyboard */,
 				E90AD022266CFDD80076ACBB /* Assets.xcassets */,
+				E9F22503267B7FCA00E6F1C2 /* powerup01.mp3 */,
+				E9616184267DB41600687AE8 /* coin03.mp3 */,
 				E90AD024266CFDD80076ACBB /* LaunchScreen.storyboard */,
 				E90AD027266CFDD80076ACBB /* Info.plist */,
 			);
@@ -124,8 +133,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9616185267DB41600687AE8 /* coin03.mp3 in Resources */,
 				E90AD026266CFDD80076ACBB /* LaunchScreen.storyboard in Resources */,
 				E90AD023266CFDD80076ACBB /* Assets.xcassets in Resources */,
+				E9F22504267B7FCA00E6F1C2 /* powerup01.mp3 in Resources */,
 				E90AD021266CFDD70076ACBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +150,7 @@
 			files = (
 				E90AD01E266CFDD70076ACBB /* ViewController.swift in Sources */,
 				E90AD01A266CFDD70076ACBB /* AppDelegate.swift in Sources */,
+				E90AD030266D1C820076ACBB /* GameScene.swift in Sources */,
 				E90AD01C266CFDD70076ACBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.y.hiroyuki.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.y.hiroyuki.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
