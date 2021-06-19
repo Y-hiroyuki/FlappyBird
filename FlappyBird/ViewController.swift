@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         skView.showsNodeCount = true
         let scene = GameScene(size: skView.frame.size)
         skView.presentScene(scene)
-        skView.showsPhysics = true
+        //skView.showsPhysics = true
     }
     //ステータスバーを消す
     override var prefersStatusBarHidden: Bool {
