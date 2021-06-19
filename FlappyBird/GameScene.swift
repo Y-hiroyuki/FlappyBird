@@ -26,6 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AVAudioPlayerDelegate {
     let userDefaults:UserDefaults = UserDefaults.standard
     var itemScore = 0
     var itemScoreLabelNode: SKLabelNode!
+    let action = SKAction.playSoundFileNamed("coin03.mp3", waitForCompletion: false)
     
     override func didMove(to view: SKView) {
         physicsWorld.gravity = CGVector(dx: 0, dy: -4)
@@ -141,6 +142,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AVAudioPlayerDelegate {
                 upper.physicsBody?.isDynamic = false
                 wall.addChild(upper)
                 let scoreNode = SKNode()
+                scoreNode.position = CGPoint(x: upper.size.width + birdSize.width / 2 , y: self.frame.height / 2)
                 scoreNode.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: upper.size.width, height: self.frame.size.height))
                 scoreNode.physicsBody?.isDynamic = false
                 scoreNode.physicsBody?.categoryBitMask = self.scoreCategory
@@ -194,13 +196,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AVAudioPlayerDelegate {
             var bestScore = userDefaults.integer(forKey: "BEST")
             if score > bestScore {
                 bestScore = score
+                bestScoreLabelNode.text = "Best Score\(bestScore)"
                 userDefaults.set(bestScore, forKey: "BEST")
                 userDefaults.synchronize()
             }
         } else if (contact.bodyA.categoryBitMask & itemCategory) == itemCategory || (contact.bodyB.categoryBitMask & itemCategory) == itemCategory {
             itemScore += 1
             itemScoreLabelNode.text = "Item Score:\(itemScore)"
-            let action = SKAction.playSoundFileNamed("coin03.mp3", waitForCompletion: false)
             self.run(action)
             body_b.node?.removeFromParent()
         } else {
